@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "start": "http-server -p 3000 -o"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "http-server": "^0.11.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-cli": "^2.0.1",
-    "gulp-imagemin": "^4.1.0"
+    "gulp-cli": "^2.0.1"
   }
 }
