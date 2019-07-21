@@ -7,10 +7,10 @@ const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
 	 
 gulp.task('imagemin', () => {
-  gulp.src('src/assets/imgs/*')
+  return gulp.src('src/assets/imgs/*')
   .pipe(imagemin([
-    pngquant({quality: '50'}),
-    mozjpeg({quality: '50'})
+    pngquant({quality: [0.5, 0.5]}),
+    mozjpeg({quality: 50})
   ]))
-  .pipe(gulp.dest('src/assets/imgs/'))
+  .pipe(gulp.dest('src/assets/imgs/'));
 });
