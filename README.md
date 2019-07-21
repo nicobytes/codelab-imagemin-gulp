@@ -1,12 +1,10 @@
-//Copyright 2018 Google LLC.
-//SPDX-License-Identifier: Apache-2.0
+![Imgur](https://i.imgur.com/imphVvI.png)
 
+```js
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
-const extReplace = require('gulp-ext-replace');
-const webp = require('imagemin-webp');
 	 
 gulp.task('imagemin', () => {
   return gulp.src('src/assets/imgs/*')
@@ -17,6 +15,17 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest('src/assets/imgs/'));
 });
 
+```
+
+![Imgur](https://i.imgur.com/FeAsPBW.png)
+
+```js
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const extReplace = require('gulp-ext-replace');
+const webp = require('imagemin-webp');
+	 
+
 gulp.task('webp', () => {
   return gulp.src('src/assets/imgs/*')
     .pipe(imagemin([
@@ -25,3 +34,4 @@ gulp.task('webp', () => {
     .pipe(extReplace('.webp'))
     .pipe(gulp.dest('src/assets/imgs/'))
 });
+```
